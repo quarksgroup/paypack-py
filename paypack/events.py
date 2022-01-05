@@ -1,8 +1,14 @@
 
-""" Event class that implements the events endpoint methods """
+"""
+    events.py - Events module for paypack-py.
+"""
+
 from paypack.client import HttpClient, creadentials
 from paypack.oauth2 import Oauth
 
+"""
+    Event that inherits from the HttpClient class.
+"""
 
 class Event(HttpClient):
 

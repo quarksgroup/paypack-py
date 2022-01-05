@@ -1,7 +1,14 @@
+"""
+    oauth2.py - paypack-py oauth2 module
+"""
+
 import calendar
 from datetime import datetime, timedelta
 from paypack.client import HttpClient, token_keys, creadentials;
 
+"""
+    Oauth class which inhert HttpClient that is used to make api calls to the paypack api for authentication and authorization.
+"""
 class Oauth(HttpClient):
     """ Authentication endpoints """
 

@@ -1,7 +1,12 @@
+"""
+    transactions.py - paypack-py Transactions module
+"""
 from paypack.client import HttpClient, creadentials
 from paypack.oauth2 import Oauth
 
-# transactions class that inherits from the auth class and implements the transactions endpoint methods.
+"""
+    Transaction class which inherits from the HttpClient class and implements the transactions endpoint methods.
+"""
 class Transaction(HttpClient):
 
     def __init__(self):

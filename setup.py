@@ -21,29 +21,31 @@ setup(
 	# Start with a small number and increase it with 
 	py_modules=["client","events","merchant","transactions","oauth2"],
 	# every change you make https://semver.org 
-	# version='1.0.0',
+	version='1.0.2',
 	# Chose a license from here: https: // 
 	# help.github.com / articles / licensing - a - 
 	# repository. For example: MIT 
 	license='MIT',
 	# Short description of your library 
-	description='Python and Django SDK for Paypack',
+	description='Python and Django SDK for Paypack API Payment Gateway',
 	# Long description of your library 
-	# long_description=long_description,
-	# long_description_content_type='text/markdown',
-	# url='https://github.com/iradukunda1/paypack-py',
+	long_description=long_description,
+	long_description_content_type='text/markdown',
+	# url='https://github.com/quarksgroup/paypack-py',
 	# Link from which the project can be downloaded 
 	download_url='',
 	# List of keywords 
-	keywords=["paypack", "payments", "paypack-python", "paypack-python-sdk", "paypack-python-sdk-django", "paypack-python-sdk-flask", "paypack-python-sdk-pyramid", "paypack-python-sdk-tornado", "paypack-python-sdk-web", "paypack-python-sdk-web-django", "paypack-python-sdk-web-flask", "paypack-python-sdk-web-pyramid", "paypack-python-sdk-web-tornado"],
+	keywords=["paypack", "paypack-py-rwanda", "payment-py", "payments", "paypack-py", "paypack-py-sdk", "paypack-py-sdk-django", "paypack-py-sdk-flask", "paypack-py-sdk-pyramid", "paypack-py-sdk-tornado", "paypack-py-sdk-web", "paypack-py-sdk-web-django", "paypack-py-sdk-web-flask", "paypack-py-sdk-web-pyramid", "paypack-py-sdk-web-tornado"],
 	# List of packages to install with this one 
 	install_requires=['requests ~= 2.26.0'],
 	# https://pypi.org/classifiers/ 
 	classifiers=[
-		'Development Status	:: 5 - Production/Stable',
+		'Development Status :: 5 - Production/Stable',
 		'License :: OSI Approved :: MIT License',
 		'Programming Language :: Python :: 3',
-		'Operating System ::  OS Independent',
+		'Programming Language :: Python :: 3.6',
+		'Programming Language :: Python :: 3.7',
+		'Programming Language :: Python :: 3.8',
 	],
 	include_package_data=True,
 )

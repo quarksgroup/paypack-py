@@ -1,3 +1,6 @@
+"""
+    merchant.py - paypack-py merchant module
+"""
 from paypack.client import HttpClient,creadentials
 from paypack.oauth2 import Oauth
 
