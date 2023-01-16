@@ -13,7 +13,7 @@ class Transaction(HttpClient):
         HttpClient.__init__(self, client_id=creadentials.get('client_id'), client_secret=creadentials.get('client_secret'))
 
     """ Cashin implementation """
-    def cashin(self, amount, phone_number,access_token=None):
+    def cashin(self, amount, phone_number,access_token=None,mode=None):
         """
         Cashin implementation
         :param amount: Amount to be deposited
@@ -34,6 +34,11 @@ class Transaction(HttpClient):
                     'Authorization': f'Bearer {access_token}',
                     'Content-Type': 'application/json'
                 })
+        if(mode is not None):
+            if(self.client.headers.get('X-Webhook-Mode') is None):
+                self.update_headers({
+                    'X-Webhook-Mode': f'{mode}',
+                })
             
         res = self.post(url=url, json=data)
         if (res.status_code == 401):
@@ -42,7 +47,7 @@ class Transaction(HttpClient):
         return res.json()
 
     """ cashout implementation """
-    def cashout(self, amount, phone_number,access_token=None):
+    def cashout(self, amount, phone_number,access_token=None,mode=None):
         """
         Cashout implementation
         :param amount: Amount to be deducted
@@ -55,7 +60,11 @@ class Transaction(HttpClient):
                     'Authorization': f'Bearer {access_token}',
                     'Content-Type': 'application/json'
                 })
-        
+        if(mode is not None):
+            if(self.client.headers.get('X-Webhook-Mode') is None):
+                self.update_headers({
+                    'X-Webhook-Mode': f'{mode}',
+                })
         uri = '/transactions/cashout'
         data = {
             'amount': int(amount),
