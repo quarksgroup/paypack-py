@@ -1,6 +1,6 @@
-    """
-        HTTP Client Gateway Connection
-    """
+"""
+    HTTP Client Gateway Connection
+"""
 
 import requests
 client = requests.Session()
